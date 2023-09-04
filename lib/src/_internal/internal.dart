@@ -4,9 +4,12 @@
 
 library internal;
 
+import 'dart:io';
+
+import 'package:clean_provider/src/interfaces/responsive_scene.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
-part 'base_responsive_widget.dart';
+part 'base_responsive_scene.dart';
 part 'base_scene.dart';
 part 'base_view_model.dart';
