@@ -9,6 +9,7 @@ part of internal;
 abstract class BaseViewModel extends ChangeNotifier {
   /// {@macro crow.context}
   @protected
+  @nonVirtual
   BuildContext get context => _context;
   late BuildContext _context;
 }
