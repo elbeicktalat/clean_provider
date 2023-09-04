@@ -9,7 +9,7 @@ part of internal;
 /// This mixin need a type parameter of [BaseViewModel].
 @internal
 @immutable
-mixin BaseViewWidgetMixin<T extends BaseViewModel> on StatelessWidget {
+mixin BaseSceneMixin<T extends BaseViewModel> on StatelessWidget {
   /// Instance of the ViewModel.
   @protected
   T get viewModel;
@@ -25,6 +25,7 @@ mixin BaseViewWidgetMixin<T extends BaseViewModel> on StatelessWidget {
   ///
   /// This is a shorthand for [viewModel.context].
   @protected
+  @nonVirtual
   BuildContext get context => viewModel.context;
 
   /// The widget method which get the place of build method.
@@ -36,6 +37,7 @@ mixin BaseViewWidgetMixin<T extends BaseViewModel> on StatelessWidget {
   /// If do you override this than you'll lose the global context.
   @override
   @protected
+  @nonVirtual
   Widget build(final BuildContext context) {
     viewModel._context = context;
     return builder()!;

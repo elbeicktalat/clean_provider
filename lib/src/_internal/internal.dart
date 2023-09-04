@@ -7,5 +7,6 @@ library internal;
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
+part 'base_responsive_widget.dart';
+part 'base_scene.dart';
 part 'base_view_model.dart';
-part 'base_view_widget.dart';
