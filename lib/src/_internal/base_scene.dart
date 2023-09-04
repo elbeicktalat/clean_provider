@@ -37,7 +37,6 @@ mixin BaseSceneMixin<T extends BaseViewModel> on StatelessWidget {
   /// If do you override this than you'll lose the global context.
   @override
   @protected
-  @nonVirtual
   Widget build(final BuildContext context) {
     viewModel._context = context;
     return builder()!;
