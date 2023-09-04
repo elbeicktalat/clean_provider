@@ -5,16 +5,12 @@ class CounterViewModel extends ViewModel {
   int get counter => _counter.value;
   final ValueNotifier<int> _counter = 0.listen;
 
-  void increment() {
-    _counter.value++;
-    print(MediaQuery.of(context).size);
-  }
+  void increment() => _counter.value++;
 
   void decrement() => _counter.value--;
 
   @override
-  List<ChangeNotifier> get notifiers =>
-      [
+  List<ChangeNotifier> get notifiers => [
         _counter,
       ];
 }
