@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart'
     show BuildContext, StatelessWidget, Widget;
 
+@optionalTypeArgs
 abstract class Scene<T extends ViewModel> extends StatelessWidget
     with BaseSceneMixin<T> {
   const Scene(
