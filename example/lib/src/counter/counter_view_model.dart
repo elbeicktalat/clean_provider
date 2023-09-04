@@ -10,7 +10,7 @@ class CounterViewModel extends ViewModel {
   void decrement() => _counter.value--;
 
   @override
-  List<ChangeNotifier> get notifiers => [
+  List<ChangeNotifier> get notifiers => <ChangeNotifier>[
         _counter,
       ];
 }

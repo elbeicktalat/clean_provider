@@ -12,7 +12,7 @@ class CounterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SceneConsumer<CounterViewModel>(
       // use CounterView.new if no other params to receive.
-      (viewModel) => CounterView(
+      (CounterViewModel viewModel) => CounterView(
         viewModel,
         title: 'Clean Provider Counter',
       ),

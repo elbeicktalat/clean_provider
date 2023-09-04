@@ -1,5 +1,6 @@
 import 'package:clean_provider/clean_provider.dart';
 import 'package:example/src/counter/counter_view_model.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart' hide View;
 
 class CounterView extends Scene<CounterViewModel> {
@@ -39,5 +40,11 @@ class CounterView extends Scene<CounterViewModel> {
         child: const Icon(Icons.add),
       ),
     );
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(StringProperty('title', title));
   }
 }
