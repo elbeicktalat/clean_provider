@@ -53,9 +53,9 @@ mixin ResponsiveSceneMixin<T extends BaseViewModel> on BaseSceneMixin<T> {
 }
 
 final class ResponsiveSceneData {
-  ResponsiveSceneData(this.settings);
+  ResponsiveSceneData(this._settings);
 
-  final ResponsiveSceneSettings settings;
+  final ResponsiveSceneSettings _settings;
 
   late BuildContext _context;
 
@@ -87,9 +87,9 @@ final class ResponsiveSceneData {
 
   /// Return the current [ScreenType].
   ScreenType get screenType {
-    if (_getDeviceWidth >= settings.desktopChangePoint) return ScreenType.desktop;
-    if (_getDeviceWidth >= settings.tabletChangePoint) return ScreenType.tablet;
-    if (_getDeviceWidth < settings.watchChangePoint) return ScreenType.watch;
+    if (_getDeviceWidth >= _settings.desktopChangePoint) return ScreenType.desktop;
+    if (_getDeviceWidth >= _settings.tabletChangePoint) return ScreenType.tablet;
+    if (_getDeviceWidth < _settings.watchChangePoint) return ScreenType.watch;
     return ScreenType.phone;
   }
 
