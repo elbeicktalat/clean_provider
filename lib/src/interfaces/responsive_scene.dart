@@ -19,21 +19,25 @@ abstract class ResponsiveScene<T extends ViewModel> extends StatelessWidget
   final T viewModel;
 
   @override
+  @protected
   final bool alwaysUseBuilder;
 
   @override
+  @protected
   final ResponsiveSceneData screen;
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties.add(DiagnosticsProperty<T>('viewModel', viewModel));
-    properties
-        .add(DiagnosticsProperty<bool>('alwaysUseBuilder', alwaysUseBuilder));
+    properties.add(
+      DiagnosticsProperty<bool>('alwaysUseBuilder', alwaysUseBuilder),
+    );
     properties.add(DiagnosticsProperty<ResponsiveSceneData>('screen', screen));
   }
 }
 
+@immutable
 final class ResponsiveSceneSettings {
   const ResponsiveSceneSettings({
     this.desktopChangePoint = 1200,

@@ -6,8 +6,10 @@ abstract class ViewModel extends BaseViewModel {
     onStart();
   }
 
-  List<ChangeNotifier> get notifiers;
+  @protected
+  List<ChangeNotifier> get notifiers => <ChangeNotifier>[];
 
+  @protected
   @mustCallSuper
   void onStart() {
     for (final ChangeNotifier notifier in notifiers) {
@@ -16,6 +18,7 @@ abstract class ViewModel extends BaseViewModel {
   }
 
   @override
+  @protected
   @mustCallSuper
   void dispose() {
     for (final ChangeNotifier notifier in notifiers) {
