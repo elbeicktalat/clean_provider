@@ -1,5 +1,5 @@
 import 'package:clean_provider/clean_provider.dart';
-import 'package:example/src/counter/counter_view.dart';
+import 'package:example/src/counter/counter_scene.dart';
 import 'package:example/src/counter/counter_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -12,7 +12,7 @@ class CounterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SceneConsumer<CounterViewModel>(
       // use CounterView.new if no other params to receive.
-      (CounterViewModel viewModel) => CounterView(
+      (CounterViewModel viewModel) => CounterScene(
         viewModel,
         title: 'Clean Provider Counter',
       ),

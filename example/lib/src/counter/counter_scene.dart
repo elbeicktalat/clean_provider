@@ -3,8 +3,8 @@ import 'package:example/src/counter/counter_view_model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart' hide View;
 
-class CounterView extends Scene<CounterViewModel> {
-  const CounterView(
+class CounterScene extends Scene<CounterViewModel> {
+  const CounterScene(
     super.viewModel, {
     required this.title,
     super.key,
