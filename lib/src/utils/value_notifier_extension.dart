@@ -5,6 +5,13 @@
 import 'package:flutter/material.dart';
 
 extension ValueNotifierExtension<T> on T {
+  /// Create an instance of the [ValueNotifier] with the current object type.
+  ///
+  /// ```dart
+  /// final ValueNotifier<bool> isLoading = false.listen
+  /// // same as
+  /// final ValueNotifier<bool> isLoading = ValueNotifier(false);
+  /// ```
   ValueNotifier<T> get listen {
     return ValueNotifier<T>(this);
   }

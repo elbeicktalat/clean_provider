@@ -4,10 +4,10 @@
 
 part of internal;
 
-/// The parent of all ViewModels.
+/// The parent of all [ViewModel]s.
 @internal
 abstract class BaseViewModel extends ChangeNotifier {
-  /// {@macro crow.context}
+  /// {@macro clean_provider.context}
   @protected
   @nonVirtual
   BuildContext get context => _context;

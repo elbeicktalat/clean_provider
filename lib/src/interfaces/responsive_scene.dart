@@ -7,6 +7,7 @@ import 'package:clean_provider/src/interfaces/view_model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+/// The responsive version of [Scene].
 @optionalTypeArgs
 abstract class ResponsiveScene<T extends ViewModel> extends StatelessWidget
     with BaseSceneMixin<T>, ResponsiveSceneMixin<T> {
@@ -41,6 +42,7 @@ abstract class ResponsiveScene<T extends ViewModel> extends StatelessWidget
   }
 }
 
+/// Holds the end points of the [ResponsiveScene].
 @immutable
 final class ResponsiveSceneSettings {
   const ResponsiveSceneSettings({
@@ -68,6 +70,7 @@ final class ResponsiveSceneSettings {
   final double watchChangePoint;
 }
 
+/// Every supported screen type.
 enum ScreenType {
   watch,
   phone,

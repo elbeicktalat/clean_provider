@@ -13,6 +13,10 @@ import 'package:provider/single_child_widget.dart';
 /// without need to create a concrete [ViewModel].
 final class _DefaultViewModel extends ViewModel {}
 
+/// Provide your [Scene] the proper [viewModel].
+///
+/// This widget receive a type parameter, subtype of [ViewModel]
+/// to inject your concrete [ViewModel].
 @optionalTypeArgs
 final class SceneConsumer<T extends ViewModel> extends StatelessWidget {
   const SceneConsumer(
@@ -21,6 +25,7 @@ final class SceneConsumer<T extends ViewModel> extends StatelessWidget {
     super.key,
   });
 
+  /// List of providers needed to rebuild your UI.
   final List<SingleChildWidget>? providers;
   final SceneBuilder<T> _sceneBuilder;
 

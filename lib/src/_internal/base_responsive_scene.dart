@@ -4,12 +4,20 @@
 
 part of internal;
 
+/// The responsive version of [BaseSceneMixin].
 @internal
 @immutable
 mixin ResponsiveSceneMixin<T extends BaseViewModel> on BaseSceneMixin<T> {
+  /// Instance of [ResponsiveSceneData].
+  ///
+  /// This object holds scree util info such as:
+  /// * screen width
+  /// * screen height
+  /// * current screen type
   @protected
   ResponsiveSceneData get screen;
 
+  /// Force the [build] method to ignore other widget methods and return the [builder].
   @protected
   bool get alwaysUseBuilder;
 
@@ -43,19 +51,24 @@ mixin ResponsiveSceneMixin<T extends BaseViewModel> on BaseSceneMixin<T> {
   @protected
   Widget? builder() => null;
 
+  /// The widget method which get invoked if the current screen has a `desktop` size.
   @protected
   Widget? desktop() => null;
 
-  @protected
-  Widget? phone() => null;
-
+  /// The widget method which get invoked if the current screen has a `tablet` size.
   @protected
   Widget? tablet() => null;
 
+  /// The widget method which get invoked if the current screen has a `phone` size.
+  @protected
+  Widget? phone() => null;
+
+  /// The widget method which get invoked if the current screen has a `watch` size.
   @protected
   Widget? watch() => null;
 }
 
+/// Holds screen util info data.
 final class ResponsiveSceneData {
   ResponsiveSceneData(this._settings);
 
@@ -91,8 +104,12 @@ final class ResponsiveSceneData {
 
   /// Return the current [ScreenType].
   ScreenType get screenType {
-    if (_getDeviceWidth >= _settings.desktopChangePoint) return ScreenType.desktop;
-    if (_getDeviceWidth >= _settings.tabletChangePoint) return ScreenType.tablet;
+    if (_getDeviceWidth >= _settings.desktopChangePoint) {
+      return ScreenType.desktop;
+    }
+    if (_getDeviceWidth >= _settings.tabletChangePoint) {
+      return ScreenType.tablet;
+    }
     if (_getDeviceWidth < _settings.watchChangePoint) return ScreenType.watch;
     return ScreenType.phone;
   }

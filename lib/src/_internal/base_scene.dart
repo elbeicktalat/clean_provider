@@ -4,17 +4,19 @@
 
 part of internal;
 
-/// The base mixin for every ViewWidget.
+/// The base mixin for every [Scene] widget.
 ///
 /// This mixin need a type parameter of [BaseViewModel].
 @internal
 @immutable
 mixin BaseSceneMixin<T extends BaseViewModel> on StatelessWidget {
-  /// Instance of the ViewModel.
+  /// Instance of [ViewModel].
+  ///
+  /// The viewModel will hold the logic you want to pass to the UI.
   @protected
   T get viewModel;
 
-  /// {@template crow.context}
+  /// {@template clean_provider.context}
   ///
   /// The [context] contains information about the location in the
   /// tree at which the associated widget is being built.
@@ -34,7 +36,7 @@ mixin BaseSceneMixin<T extends BaseViewModel> on StatelessWidget {
 
   /// The Widget build method, don't override this method instead use [builder].
   ///
-  /// If do you override this than you'll lose the global context.
+  /// If you do override this method than you'll lose the global context.
   @override
   @protected
   Widget build(final BuildContext context) {

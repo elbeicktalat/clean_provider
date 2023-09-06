@@ -8,6 +8,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart'
     show BuildContext, StatelessWidget, Widget;
 
+/// Extends the [StatelessWidget] to the next level offer you a clean approach
+/// to build your UI.
+///
+/// The instance of [viewModel] injected via the contracture,
+/// will allows you to meet your logic in a clean.
 @optionalTypeArgs
 abstract class Scene<T extends ViewModel> extends StatelessWidget
     with BaseSceneMixin<T> {

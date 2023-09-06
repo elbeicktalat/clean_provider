@@ -15,5 +15,6 @@ part 'base_responsive_scene.dart';
 part 'base_scene.dart';
 part 'base_view_model.dart';
 
+/// Inject an instance of [ViewModel] and return a [Scene] widget.
 @internal
 typedef SceneBuilder<V extends ViewModel> = Widget Function(V viewModel);
