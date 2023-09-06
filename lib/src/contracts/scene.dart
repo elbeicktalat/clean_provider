@@ -2,11 +2,13 @@
 // Use of this source code is governed by a MIT-style license that can be
 // found in the LICENSE file.
 
-import 'package:clean_provider/clean_provider.dart';
 import 'package:clean_provider/src/_internal/internal.dart';
-import 'package:flutter/foundation.dart';
+import 'package:clean_provider/src/contracts/view_model.dart';
+import 'package:flutter/foundation.dart'
+    show DiagnosticPropertiesBuilder, DiagnosticsProperty;
 import 'package:flutter/material.dart'
     show BuildContext, StatelessWidget, Widget;
+import 'package:meta/meta.dart' show nonVirtual, optionalTypeArgs, protected;
 
 /// Extends the [StatelessWidget] to the next level offer you a clean approach
 /// to build your UI.

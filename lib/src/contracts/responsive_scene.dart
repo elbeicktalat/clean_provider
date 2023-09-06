@@ -3,9 +3,12 @@
 // found in the LICENSE file.
 
 import 'package:clean_provider/src/_internal/internal.dart';
-import 'package:clean_provider/src/interfaces/view_model.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
+import 'package:clean_provider/src/contracts/view_model.dart';
+import 'package:flutter/foundation.dart'
+    show DiagnosticPropertiesBuilder, DiagnosticsProperty;
+import 'package:flutter/material.dart' show StatelessWidget;
+import 'package:meta/meta.dart'
+    show immutable, nonVirtual, optionalTypeArgs, protected;
 
 /// The responsive version of [Scene].
 @optionalTypeArgs

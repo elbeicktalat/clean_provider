@@ -3,8 +3,8 @@
 // found in the LICENSE file.
 
 import 'package:clean_provider/src/_internal/internal.dart';
-import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
+import 'package:flutter/material.dart' show ChangeNotifier, ValueNotifier;
+import 'package:meta/meta.dart' show experimental, mustCallSuper, protected;
 
 /// The parent of all concrete [ViewModel]s.
 ///

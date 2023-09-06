@@ -3,11 +3,15 @@
 // found in the LICENSE file.
 
 import 'package:clean_provider/src/_internal/internal.dart';
-import 'package:clean_provider/src/interfaces/view_model.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:provider/single_child_widget.dart';
+import 'package:clean_provider/src/contracts/view_model.dart';
+import 'package:flutter/foundation.dart'
+    show DiagnosticPropertiesBuilder, IterableProperty;
+import 'package:flutter/material.dart'
+    show BuildContext, StatelessWidget, Widget;
+import 'package:meta/meta.dart' show nonVirtual, optionalTypeArgs;
+import 'package:provider/provider.dart'
+    show ChangeNotifierProvider, Consumer, MultiProvider;
+import 'package:provider/single_child_widget.dart' show SingleChildWidget;
 
 /// Instance of [ViewModel], this allows developers to use [Scene]s
 /// without need to create a concrete [ViewModel].

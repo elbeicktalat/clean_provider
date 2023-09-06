@@ -4,12 +4,13 @@
 
 library internal;
 
-import 'dart:io';
+import 'dart:io' show Platform;
 
-import 'package:clean_provider/src/interfaces/responsive_scene.dart';
-import 'package:clean_provider/src/interfaces/view_model.dart';
-import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
+import 'package:clean_provider/src/contracts/responsive_scene.dart';
+import 'package:clean_provider/src/contracts/view_model.dart';
+import 'package:flutter/material.dart'
+    show Widget, StatelessWidget, BuildContext, MediaQuery, ChangeNotifier;
+import 'package:meta/meta.dart' show internal, immutable, protected, nonVirtual;
 
 part 'base_responsive_scene.dart';
 part 'base_scene.dart';
