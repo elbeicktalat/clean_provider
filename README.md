@@ -1,14 +1,9 @@
 ## clean_provider
 
+A simple way to apply best practices with flutter and provider. 
+
 [![Github stars](https://img.shields.io/github/stars/elbeicktalat/clean_provider?logo=github)](https://github.com/elbeicktalat/clean_provider)
 [![Pub Version](https://img.shields.io/pub/v/clean_provider?color=blue&logo=dart)](https://pub.dev/packages/clean_provider)
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
 
 ## Getting started
 
