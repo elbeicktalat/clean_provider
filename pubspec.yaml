@@ -1,6 +1,6 @@
 name: clean_provider
 description: A simple way to apply best practices with flutter and provider.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/elbeicktalat/clean_provider
 
 environment:
