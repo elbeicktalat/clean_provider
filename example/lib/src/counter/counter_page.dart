@@ -12,10 +12,10 @@ class CounterPage extends StatelessWidget {
   const CounterPage({super.key});
 
   static List<SingleChildWidget> get providers => <SingleChildWidget>[
-    ChangeNotifierProvider<CounterViewModel>(
-      create: (_) => CounterViewModel(),
-    ),
-  ];
+        ChangeNotifierProvider<CounterViewModel>(
+          create: (_) => CounterViewModel(),
+        ),
+      ];
 
   @override
   Widget build(BuildContext context) {
