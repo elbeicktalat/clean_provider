@@ -20,7 +20,7 @@ final class ResponsiveScreenInfo extends ScreenInfo {
   final ResponsiveSceneSettings _settings;
 
   bool get _isDesktop =>
-      Platform.isWindows || Platform.isMacOS || Platform.isLinux;
+      kIsWeb || Platform.isWindows || Platform.isMacOS || Platform.isLinux;
 
   /// Whether [screenType] is [ScreenType.desktop]
   bool get isDesktop => screenType == ScreenType.desktop;
